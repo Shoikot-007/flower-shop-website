@@ -126,101 +126,6 @@ body {
   height: auto;
 }
 
-/* Latest Deals Section */
-.deals-section {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.deals-title {
-  font-family: "Noto Serif", serif;
-  font-size: 3.125rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: black;
-}
-
-.deals-title .highlight {
-  color: #e95a08;
-}
-
-.deals-subtitle {
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  font-size: 1.375rem;
-  color: #7a7c80;
-  line-height: 1.6;
-}
-
-.deals-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1rem;
-  height: 400px;
-}
-
-.deal-card {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.deal-card:hover {
-  transform: scale(1.02);
-}
-
-.deal-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.deal-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.deal-text {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.shop-now-link {
-  color: white;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.shop-now-link:hover {
-  opacity: 0.8;
-}
-
-.deal-card.large {
-  grid-row: span 2;
-}
-
 /* Our Plants Section */
 .plants-section {
   max-width: 1280px;
@@ -372,6 +277,101 @@ body {
   font-size: 1.2rem;
 }
 
+/* Latest Deals Section */
+.deals-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.deals-title {
+  font-family: "Noto Serif", serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.deals-title .highlight {
+  color: #e95a08;
+}
+
+.deals-subtitle {
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  font-size: 1.375rem;
+  color: #7a7c80;
+  line-height: 1.6;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 400px;
+}
+
+.deal-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+  transform: scale(1.02);
+}
+
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.deal-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shop-now-link {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.shop-now-link:hover {
+  opacity: 0.8;
+}
+
+.deal-card.large {
+  grid-row: span 2;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
@@ -474,5 +474,50 @@ body {
   .plants-lover-list li {
     font-size: 0.95rem;
     margin-bottom: 1.2rem;
+  }
+
+  /* Latest Deals */
+  .deals-section {
+    padding: 2rem 1rem;
+  }
+
+  .deals-title {
+    font-size: 2rem;
+  }
+
+  .deals-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 200px);
+    height: auto;
+    gap: 1rem;
+  }
+
+  .deal-card.large {
+    grid-row: span 1;
+  }
+
+  .deal-text {
+    font-size: 1.2rem;
+  }
+
+  .shop-now-link {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
