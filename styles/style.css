@@ -200,7 +200,7 @@ body {
 .plants-lover-section {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
 }
 
 .plants-lover-container {
@@ -372,6 +372,88 @@ body {
   grid-row: span 2;
 }
 
+/* Newsletter Section */
+.newsletter-section {
+  background-image: url("/assets/news-letter-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 12rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.newsletter-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter-title {
+  font-family: "Noto Serif", serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: white;
+}
+
+.newsletter-input::placeholder {
+  color: #999;
+  font-size: 16px;
+  font-family: Inter;
+}
+
+.newsletter-button {
+  background-color: #e95a08;
+  color: white;
+  border: none;
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  min-width: 120px;
+  font-family: "Inter", sans-serif;
+}
+
+.newsletter-button:hover {
+  background-color: #d64a07;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
@@ -519,5 +601,26 @@ body {
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Newsletter Mobile Styles */
+  .newsletter-section {
+    padding: 5rem 1rem;
+  }
+
+  .newsletter-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .newsletter-form {
+    max-width: 350px;
+  }
+
+  .newsletter-button {
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
