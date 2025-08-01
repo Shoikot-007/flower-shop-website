@@ -7,8 +7,13 @@
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  color: #333;
   background-color: white;
+}
+
+/* Header + Hero Container */
+.header-hero-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -16,6 +21,8 @@ body {
   padding: 1rem 0;
   position: relative;
   z-index: 1000;
+  flex-shrink: 0;
+  margin-bottom: 8rem;
 }
 
 .nav-container {
@@ -46,7 +53,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #666;
+  color: #7a7c80;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -64,11 +71,17 @@ body {
   font-weight: 500;
 }
 
+.cart-text {
+  display: none;
+}
+
 /* Hero Section */
 .hero-section {
-  padding: 4rem 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 3rem 0;
 }
 
 .hero-container {
@@ -79,26 +92,27 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  width: 100%;
 }
 
 .hero-title {
   font-family: "Noto Serif", serif;
-  font-size: 3.5rem;
+  font-size: 4.0625rem;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: black;
 }
 
 .highlight {
-  color: #E95A08;
+  color: #e95a08;
 }
 
 .hero-description {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.375rem;
+  color: #7a7c80;
   line-height: 1.6;
-  max-width: 480px;
+  max-width: 600px;
 }
 
 .hero-image {
@@ -112,6 +126,101 @@ body {
   height: auto;
 }
 
+/* Latest Deals Section */
+.deals-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.deals-title {
+  font-family: "Noto Serif", serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.deals-title .highlight {
+  color: #e95a08;
+}
+
+.deals-subtitle {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.375rem;
+  color: #7a7c80;
+  line-height: 1.6;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 400px;
+}
+
+.deal-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+  transform: scale(1.02);
+}
+
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.deal-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shop-now-link {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.shop-now-link:hover {
+  opacity: 0.8;
+}
+
+.deal-card.large {
+  grid-row: span 2;
+}
+
 /* Our Plants Section */
 .plants-section {
   max-width: 1280px;
@@ -122,21 +231,21 @@ body {
 
 .section-title {
   font-family: "Noto Serif", serif;
-  font-size: 2.5rem;
+  font-size: 3.125rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
 .section-title span {
-  color: #E95A08;
+  color: #e95a08;
 }
 
 .section-subtitle {
-  max-width: 600px;
+  max-width: 860px;
   margin: 0 auto 3rem;
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.375rem;
+  color: #7a7c80;
   line-height: 1.6;
 }
 
@@ -154,24 +263,24 @@ body {
 }
 
 .product-title {
-  font-size: 1rem;
+  font-size: 1.375rem;
   font-weight: 500;
   margin-bottom: 0.2rem;
-  color: #333;
+  color: black;
 }
 
 .product-price {
+  font-size: 1.375rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #000;
 }
 
 .add-to-cart {
   width: 100%;
-  background-color: #E95A08;
+  background-color: #e95a08;
   color: white;
   border: none;
-  padding: 0.9rem 1rem;
+  padding: 1rem;
   text-transform: uppercase;
   font-size: 0.85rem;
   cursor: pointer;
@@ -182,7 +291,88 @@ body {
   background-color: #e05d2c;
 }
 
-/* Mobile Styles (≤768px) */
+/* Plants Lover Section */
+.plants-lover-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.plants-lover-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.plants-lover-image {
+  position: relative;
+  display: inline-block;
+}
+
+.plants-lover-image img {
+  width: 100%;
+  height: auto;
+}
+
+.trusted-badge {
+  position: absolute;
+  top: -110px;
+  right: -85px;
+  width: 250px !important;
+  height: 250px !important;
+  z-index: 10;
+  object-fit: contain;
+  animation: spin 2s linear infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.plants-lover-content {
+  text-align: left;
+}
+
+.plants-lover-title {
+  font-family: "Noto Serif", serif;
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.plants-lover-list {
+  list-style: none;
+  padding: 0;
+}
+
+.plants-lover-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.375rem;
+  color: #7a7c80;
+  line-height: 1.6;
+}
+
+.plants-lover-list li::before {
+  content: "•";
+  color: #7a7c80;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -196,14 +386,22 @@ body {
     height: 35px;
   }
 
+  .cart-text {
+    display: block;
+  }
+
   .hero-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     padding: 2rem 0;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0;
+    padding: 0 1rem;
     text-align: left;
   }
 
@@ -233,7 +431,48 @@ body {
     font-size: 0.95rem;
   }
 
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Plants Lover */
+  .plants-lover-section {
+    padding: 2rem 1rem;
+  }
+
+  .plants-lover-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .plants-lover-image {
+    order: 1;
+  }
+
+  .plants-lover-content {
+    order: 2;
+    text-align: left;
+  }
+
+  .plants-lover-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .trusted-badge {
+    display: none;
+  }
+
+  .plants-lover-list li {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
   }
 }
